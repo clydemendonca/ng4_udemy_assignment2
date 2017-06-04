@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  username = '';
+  isUsernameEmpty = true;
+
+  onInput() {
+    if (this.username === '')
+      this.isUsernameEmpty = true;
+    else
+      this.isUsernameEmpty = false;
+  }
+
+  resetUsername() {
+    this.username = '';
+    this.isUsernameEmpty = true;
+  }
+
 }
